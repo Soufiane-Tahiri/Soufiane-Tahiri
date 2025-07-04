@@ -26,7 +26,13 @@
 - **OS:** Linux (Kali, Ubuntu), Windows
 
 ---
+![SOUFIANETAH's Stats](https://github-readme-stats.vercel.app/api?username=SOUFIANETAH&theme=tokyonight&show_icons=true&hide_border=true&count_private=true)
 
+
+![SOUFIANETAH's Streak](https://github-readme-streak-stats.herokuapp.com/?user=SOUFIANETAH&theme=tokyonight&hide_border=true)
+
+
+![SOUFIANETAH's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SOUFIANETAH&theme=tokyonight&show_icons=true&hide_border=true&layout=compact)
 ## 📫 Let's Connect
 
 - 🌐 GitHub: [@SOUFIANETAH](https://github.com/SOUFIANETAH)
