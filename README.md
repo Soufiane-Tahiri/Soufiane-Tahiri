@@ -1,6 +1,6 @@
 # 👋 Hello, I'm Soufiane!
 
-🎓 I'm a 20-year-old third-year student in the **Licence d'Excellence** program, specializing in **ISOC (Intelligence et Sécurité des Objets Connectés)**.
+🎓 I'm a 20-year-old M1 student in the **Master d'Excellence** program, specializing in **ISOC (Intelligence et Sécurité des Objets Connectés)**.
 
 💡 I'm passionate about **cybersecurity**, ethical hacking, and the secure development of connected systems (IoT).
 
