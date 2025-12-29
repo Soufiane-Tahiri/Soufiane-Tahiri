@@ -1,44 +1,62 @@
-# 👋 Hello, I'm Soufiane!
+# ⚡ Soufiane Tahiri
 
-🎓 I'm a 20-year-old M1 student in the **Master d'Excellence** program, specializing in **ISOC (Intelligence et Sécurité des Objets Connectés)**.
-
-💡 I'm passionate about **cybersecurity**, ethical hacking, and the secure development of connected systems (IoT).
-
-🔒 I love exploring how systems work under the hood — especially when it comes to **vulnerabilities, exploitation, and digital defense**.
+### 🛡️ IoT Security & Embedded Systems Developer
+**M1 ISOC Student** • *Focus: Low-Level Exploitation, Network Defense, and Secure Architecture.*
 
 ---
 
-## 🚀 What I'm Working On
+## 🚀 Professional Profile
+I am a technical specialist focused on the **security of connected objects (IoT)**. My work bridges the gap between hardware and software—writing code to control systems and using offensive techniques to test their limits.
 
-- 🔧 Building secure and scalable web applications
-- 💻 Exploring real-world **penetration testing** techniques
-- 📂 Developing the **FacultyManagement-Portal-for-RH** project to streamline HR tasks
-- 📚 Preparing for security certifications 
-
----
-
-## 🛠️ Skills & Tools
-
-- **Languages:** Python, PHP, JavaScript, Bash, C, JAVA.
-- **Web:** HTML/CSS, Node.js, MySQL
-- **Cybersecurity:** Wireshark, Nmap, Burp Suite, Metasploit
-- **Version Control:** Git & GitHub
-- **OS:** Linux (Kali, Ubuntu), Windows
-
----
-![Soufiane-Tahiri's Stats](https://github-readme-stats.vercel.app/api?username=Soufiane-Tahiri&theme=tokyonight&show_icons=true&hide_border=true&count_private=true)
-
-
-![Soufiane-Tahiri's Streak](https://github-readme-streak-stats.herokuapp.com/?user=Soufiane-Tahiri&theme=tokyonight&hide_border=true)
-
-
-![Soufiane-Tahiri's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Soufiane-Tahiri&theme=tokyonight&show_icons=true&hide_border=true&layout=compact)
-## 📫 Let's Connect
-
-- 🌐 GitHub: [@SOUFIANETAH](https://github.com/SOUFIANETAH)
-- 📬 Email: *tahirisoufiane.406@gmail.com*
+* **Core Focus:** Building secure IoT architectures and reverse-engineering vulnerable firmware.
+* **Mindset:** "You can't secure what you don't understand. I build it to understand it, and break it to secure it."
 
 ---
 
-> *"Learning by breaking and building — I believe in mastering systems from the inside out."*  
-— Soufiane
+## ⚔️ Technical Capabilities
+
+| Domain | Stack & Tooling |
+| :--- | :--- |
+| **💀 Offensive Ops** | **Reverse Engineering** (x32dbg, Ghidra), **Network Attacks** (ARP Spoofing, MITM), **Pentesting** (Burp Suite, Metasploit, Nmap), **Payload Dev** (Bash, Python). |
+| **🛡️ Defensive Ops** | **Traffic Analysis** (Wireshark, TCPdump), **IDS Implementation** (MQTT/Network Anomaly Detection), **System Hardening**, **Secure Coding**. |
+| **⚙️ Embedded/Low-Level** | **Architectures** (ARM, x86), **Virtualization** (QEMU, Docker), **Kernel** (Linux Boot Process, Drivers), **Protocols** (MQTT, HTTP/S, TCP/IP). |
+| **💻 Code & Dev** | **C** (Memory Mgmt/System), **Java** (Enterprise/Tools), **Python** (Automation/Scripting), **JavaScript** (Backend logic). |
+
+---
+
+## 🛠️ Featured Engineering Projects
+
+### 📡 [IoT-IDS-MQTT] (Active Development)
+**Custom Intrusion Detection System for MQTT Networks**
+* **The Mission:** Engineer a lightweight IDS to detect anomalous payloads and unauthorized publishers in smart environments.
+* **The Tech:** Python, MQTT Protocol, Pattern Matching Logic.
+* **Status:** Implementing real-time packet inspection and logging mechanisms.
+
+### 📧 [Inbox Sentry] (Active Development)
+**Email Security & Header Analysis Tool**
+* **The Mission:** Automate the detection of phishing indicators and malicious attachments by parsing raw email headers.
+* **The Tech:** Java (Swing/JavaFX), Regex, Security Heuristics.
+* **Status:** Functional desktop utility for email forensics.
+
+### 🦠 [Malware & Binary Analysis]
+**Deobfuscation & Reverse Engineering Labs**
+* **The Mission:** Dissect live malware samples to map execution flow, identify persistence mechanisms (Registry keys), and patch binary instructions.
+* **The Tech:** x32dbg, Assembly (ASM), Sandboxed Environment.
+* **Status:** Documented analysis of viral behavior and manual neutralization techniques.
+
+---
+
+## 📈 Activity & Stats
+
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=Soufiane-Tahiri&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="Soufiane's Stats" height="170px" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soufiane-Tahiri&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" alt="Top Languages" height="170px" />
+</p>
+
+---
+
+## 🤝 Connect
+> Open to collaboration on **Embedded Development** and **Security Tooling**.
+
+- **GitHub:** [@Soufiane-Tahiri](https://github.com/Soufiane-Tahiri)
+- **Email:** [tahirisoufiane.406@gmail.com](mailto:tahirisoufiane.406@gmail.com)
