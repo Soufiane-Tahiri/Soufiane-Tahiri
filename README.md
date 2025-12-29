@@ -51,7 +51,7 @@ I am a technical specialist focused on the **security of connected objects (IoT)
 <p align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=Soufiane-Tahiri&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="Soufiane's Stats" height="170px" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soufiane-Tahiri&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" alt="Top Languages" height="170px" />
-</p>
+  <img src="https://streak-stats.demolab.com?user=Soufiane-Tahiri&theme=default&hide_border=true" alt="Soufiane-Tahiri's GitHub Stats" /></p>
 
 ---
 
