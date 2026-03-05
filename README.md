@@ -117,9 +117,7 @@ Open to collaboration on embedded systems development, AI/ML applications, mobil
 ---
 
 <div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Soufiane-Tahiri&theme=default&show_icons=true&hide_border=true&count_private=true)
-
+![Visitor Count](https://profile-counter.glitch.me/Soufiane-Tahiri/count.svg)
 ![GitHub Streak](https://streak-stats.demolab.com?user=Soufiane-Tahiri&theme=default&hide_border=true)
 
 </div>
