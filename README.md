@@ -117,7 +117,7 @@ Open to collaboration on embedded systems development, AI/ML applications, mobil
 ---
 
 <div align="center">
-![Visitor Count](https://profile-counter.glitch.me/Soufiane-Tahiri/count.svg)
+  
 ![GitHub Streak](https://streak-stats.demolab.com?user=Soufiane-Tahiri&theme=default&hide_border=true)
 
 </div>
