@@ -1,123 +1,46 @@
 # Soufiane Tahiri
 
-**M1 ISOC Student** | Systems Engineer | AI/ML Developer | Embedded Security Researcher
+**M1 ISOC** — IoT Security & Embedded Systems  
+Université Moulay Ismail, Faculté des Sciences, Meknès
 
 ---
 
-## About Me
-
-Graduate student at **Université Moulay Ismail, Faculté des Sciences (Meknes)** pursuing a Master's in **IoT Intelligence & Security**. My work spans the full stack of intelligent embedded systems—from bare-metal ARM programming and OS porting to deep learning model deployment and security analysis.
-
-I build things from scratch: custom RTOS compatibility layers, Linux kernels for ARM architectures, mobile applications with LLM inference, neural networks for audio forensics, and intrusion detection systems for IoT protocols. The work is practical, technically deep, and often incomplete—because real engineering is about exploration, not polished demos.
-
-**Technical Focus Areas:**
-- **Embedded Systems Engineering:** RTOS porting (mbed OS on ESP32), bare-metal ARM development, Linux from scratch for ARM
-- **AI/ML Systems:** Deep learning (RNNs, Transformers), voice manipulation detection, predictive modeling, LLM integration
-- **Mobile Development:** Android applications (Java), on-device AI inference, expense tracking with category prediction
-- **Security Research:** IoT protocol analysis, network intrusion detection, reverse engineering, binary exploitation
+I work at the hardware-software boundary — firmware security, bare-metal ML inference, and low-level exploitation on ARM. The problems I find interesting are the ones where the security model breaks down at the register level.
 
 ---
 
-## Technical Stack
+## Active Projects
 
-### Embedded Systems & Low-Level Development
-**Operating Systems:** mbed OS API porting to ESP32/FreeRTOS, Linux from scratch for ARM architectures  
-**Architectures:** ARM Cortex-M (bare-metal, RTOS), ESP32 (Xtensa LX6), x86/x64  
-**Development:** C/C++ (systems programming, HAL implementation), bare-metal firmware, bootloaders  
-**RTOS:** FreeRTOS task scheduling, mbed RTOS API design, thread synchronization primitives  
-**Protocols:** MQTT, Modbus RTU, HTTP/S, TCP/IP stack internals  
-**Hardware:** ESP32, Arduino, Raspberry Pi, sensor interfacing (DHT11, EEPROM, RTC), RS485 transceivers  
-**Tools:** PlatformIO, GDB, JTAG debugging, QEMU emulation
+**[tinyinfer](https://github.com/Soufiane-Tahiri/tinyinfer)** — C99 neural network inference engine for ESP32 and resource-constrained MCUs. No heap allocation, no external dependencies. Forward pass, tensor ops, and weight loading within fixed SRAM budgets. Targets PyTorch-exported models.
 
-### Artificial Intelligence & Machine Learning
-**Deep Learning:** RNNs, Transformer architectures, sequence modeling  
-**Applications:** Voice manipulation detection (audio forensics), predictive classification, time-series analysis  
-**Frameworks:** TensorFlow/Keras, scikit-learn, pandas, NumPy  
-**LLM Integration:** DeepSeek API for on-device inference, prompt engineering for classification tasks  
-**Data Processing:** Feature extraction, signal processing, model evaluation
+**embsecfirm** *(private)* — Security-hardened firmware stack for ESP32. Full threat model, verified secure boot chain, encrypted OTA pipeline, MPU isolation regions, hardware-backed key management. Complete architecture documented before a line of application code is written.
 
-### Mobile & Application Development
-**Android Development:** Native Java (Android Studio), UI/UX design, SQLite databases,Room 
-**AI-Powered Apps:** Expense tracking with LLM-based category prediction  
-**Libraries:** Chart rendering (MPAndroidChart/similar), HTTP clients, JSON parsing  
-**Architecture:** MVC pattern, background tasks, intent handling
-
-### Security & Offensive Research
-**Reverse Engineering:** Malware analysis (x32dbg, Ghidra), binary deobfuscation, control flow analysis  
-**Network Security:** MITM attacks, ARP spoofing, traffic analysis (Wireshark, TCPdump)  
-**Penetration Testing:** Web application security (Burp Suite), network reconnaissance (Nmap), Metasploit  
-**IoT Security:** MQTT protocol exploitation, firmware extraction, IDS development  
-**Defensive Tools:** Custom intrusion detection engines, forensic automation scripts
-
-### Software Engineering
-**Languages:** C (systems/embedded), Java (Android/enterprise), Python (ML/automation), JavaScript/TypeScript (web)  
-**Version Control:** Git, GitHub workflows  
-**Build Systems:** Make, CMake, PlatformIO, Gradle  
-**Development Environments:** Linux (primary), VS Code, Android Studio
+**IoT IDS** *(private)* — ML-based intrusion detection for MQTT-connected IoT devices. Building the dataset by running 8+ attack scripts (spoofing, flooding, injection) against a real ESP32 target over HiveMQ. Custom dataset generation before model training.
 
 ---
 
-## Project Domains
+## Completed Work
 
-My repository is a snapshot of ongoing technical exploration across multiple engineering disciplines. Projects range from complete production systems to experimental prototypes—many remain unfinished because learning the fundamentals is often more valuable than polishing a demo.
+**[Audio Spoofing Detection](https://soufianetahiri.me/projects/voice-detection.html)** — Voice manipulation detection trained on ASVspoof2019 LA (71,237-sample eval set). Three architectures compared — BiLSTM (~656K params), CNN (~360K), Transformer (~282K) — using LFCC feature extraction (60 coeff, 512-pt FFT). Transformer selected based on generalization gap analysis (val EER 0.0466 vs test 0.3496, 7.5× gap vs CNN's 54×), then retrained on full dataset. Final: 87.11% accuracy, EER 26.76%, F1 0.926. Desktop inference app with mic input, ~200ms CPU latency. *(Academic — team)*
 
-### 🔌 Embedded Systems & RTOS Engineering
-Custom operating system ports, bare-metal firmware, and industrial protocol implementations. Includes mbed OS 5 API compatibility layer for ESP32 (complete multi-threaded data logger with Modbus RTU), sensor network development, and Linux kernel builds for ARM architectures.
+**[Mbed OS 5 HAL + Modbus RTU on ESP32](https://soufianetahiri.me/projects/mbed-modbus.html)** — Partial Mbed OS 5 API compatibility layer on top of ESP-IDF/FreeRTOS. Mbed threading primitives mapped to FreeRTOS tasks and semaphores; Ticker via `esp_timer` in task mode (not ISR); DHT11 1-wire driver using timer-based pulse measurement with `portENTER_CRITICAL` for 40-bit decode (2.8ms critical section). 7-task concurrent system: producer/consumer with semaphore sync, Modbus RTU FC03 frames with CRC-16 (0xA001), relay hysteresis, real-time FreeRTOS metrics. Validated: 100% CRC integrity over 180 frames, 19.3% heap usage stable throughout run.
 
-### 🤖 Artificial Intelligence & Deep Learning
-Neural network development for real-world problems: voice manipulation detection using RNNs and Transformer models, sports outcome prediction with statistical ML, and LLM integration for intelligent mobile applications.
+**[ARMv7 Low-Level Security](https://soufianetahiri.me/projects/shellcode.html)** — Position-independent shellcode in Thumb mode. ARM→Thumb state switch via BX to odd address; stack-based `//bin/sh` construction via MOV+LSL+ADD sequences (no data section, no literal pool); null-byte avoidance through encoding constraints; direct `execve` syscall via SVC #0 with R7=11. Phase 1 complete and validated under QEMU + GDB.
 
-### 📱 Mobile Application Development
-Android applications built in pure Java: expense tracking systems with DeepSeek LLM integration for automatic category prediction, data visualization using chart libraries, and local database management.
-
-### 🛡️ Security Research & Tooling
-Offensive and defensive security work: intrusion detection systems for IoT protocols (MQTT, HTTP), malware reverse engineering and binary analysis, network penetration testing, email header forensics tools, and vulnerability research.
-
-### 🔬 Systems Programming & Compiler Design
-Low-level software engineering: custom lexers and parsers for language implementation, compiler theory applications, and systems-level abstractions.
+**[SmartTrackerAI](https://github.com/si-labs-org/Expenses_Management)** — Android expense tracker with ML Kit OCR pipeline, LLaMA 3.3 70B (Groq API) for structured receipt parsing, and offline Trie + Levenshtein distance ≤2 fallback classifier. MVVM, Room ORM, WorkManager. *(Academic — team)*
 
 ---
 
-## Current Focus
+## Stack
 
-**Active Development:**  
-- mbed OS 5 API compatibility layer for ESP32 (multi-threaded industrial data logger with Modbus RTU and CSV analytics)
-- Voice manipulation detection using recurrent neural networks and Transformer-based architectures
-- Android expense tracker with on-device LLM inference (DeepSeek API) for intelligent categorization
-- MQTT intrusion detection system for anomaly-based threat detection in IoT networks
-
-**Learning Path:**  
-Linux kernel internals and ARM bootloader development, advanced deep learning architectures for audio signal processing, embedded security mechanisms (secure boot, TrustZone), and real-time system optimization techniques.
-
----
-
-## Academic Background
-
-**Master's in IoT Intelligence & Security (M1 ISOC)** - In Progress  
-Université Moulay Ismail, Faculté des Sciences, Meknes, Morocco
-
-**Curriculum Coverage:**  
-- Embedded Systems: Linux from scratch for ARM, RTOS design, bare-metal programming
-- Artificial Intelligence: Deep learning, neural network architectures, model deployment
-- Security: Network defense, IoT protocol analysis, reverse engineering
-- Systems Engineering: Compiler design, operating system internals, hardware interfacing
-
-**Origin:** Azrou, Morocco (Currently residing in Meknes for studies)
+```
+Languages     C (systems/embedded), Python (ML/automation), Java (Android), ARMv7 ASM
+Embedded      ESP32 / ESP-IDF, FreeRTOS, Mbed OS 5, Zephyr RTOS, Modbus RTU
+ML            PyTorch, BiLSTM / CNN / Transformer, LFCC feature engineering
+Security      ARMv7 exploitation, firmware security, IoT protocol analysis, IDS development
+Tools         GDB, QEMU, Wireshark, PlatformIO, Ghidra, x32dbg
+```
 
 ---
 
-## Get In Touch
-
-**GitHub:** [@Soufiane-Tahiri](https://github.com/Soufiane-Tahiri)  
-**Email:** tahirisoufiane.406@gmail.com  
-**LinkedIn:** [in/soufiane-tahiri23](https://www.linkedin.com/in/soufiane-tahiri23/)
-
-Open to collaboration on embedded systems development, AI/ML applications, mobile projects, and security research.
-
----
-
-<div align="center">
-  
-![GitHub Streak](https://streak-stats.demolab.com?user=Soufiane-Tahiri&theme=default&hide_border=true)
-
-</div>
+[soufianetahiri.me](https://soufianetahiri.me) · [linkedin](https://www.linkedin.com/in/soufiane-tahiri23/) · tahirisoufiane.406@gmail.com
